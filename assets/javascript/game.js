@@ -14,28 +14,31 @@ var lossesText = document.getElementById("losses-text");
 var guessesLeftText = document.getElementById("guessesleft-text");
 var lettersGuessedText = document.getElementById("lettersguessed-text");
 
-document.onkeyup = function(event) {
-
-    var userGuess = event.key;
+document.onkeyup = function (event) {
+  
+    userGuess = event.key;
     var computerGuess = letters[Math.floor(Math.random() * letters.Length)];
-
+  
     if (userGuess === computerGuess) {
-        wins++;
-    } else if (userGuess !== computerGuess && guessesLeft === 0) {
-        losses++;
-    } else {}
-        guessesLeft--;
+      wins++;
+      guessesLeft = 3;
+    
+    } if (userGuess !== computerGuess) {
+      guessesLeft--;
+
+    } if (guessesLeft === 0) {
+      losses++;
+      guessesLeft = 3;
+    }
 
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
 guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
 lettersGuessedText.textContent = "Your guesses: " + userGuess;
 
-userGuess.append(guesses);
+// userGuess.append(guesses);
 
 //figure out why there's  no wins
 //why isn't the user input continously recording
-//the guesses left is not restarting
-//how to restart after a win or a loss?
 //do i create a for loop?
 };
