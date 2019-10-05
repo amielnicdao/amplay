@@ -38,7 +38,7 @@ winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
 guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
 lettersGuessedText.textContent = "Your guesses: ";
-var newguesses = guesses.join(",")
+var newguesses = guesses.join(", ")
 
 guesses.push(userGuess);
 document.getElementById("allguesses").innerHTML = newguesses;
