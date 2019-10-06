@@ -9,7 +9,7 @@
 3. We check if the user guessed correctly.
     Ex: if (userGuess === computerGuess) {
           ties++;
-        } QUESTION: Do I have to write the whole alphabet?
+        } 
 4. If the user guessed correctly, we log the score under "wins."
 5. If the user has not guessed after exhausting all allowed guesses, we log the score under "losses."
 6. The user gets 10 tries to guess correctly.
